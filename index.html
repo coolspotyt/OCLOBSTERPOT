@@ -1,4 +1,3 @@
-<!OCLOBSTERPOT>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,6 @@
       font-family: 'Georgia', serif;
       background-color: #0e2a30;
       color: #f5deb3 !important;
-  --primary-text-color: var(--primary-text-color);
     }
     header {
       background-color: #0e2a30;
@@ -74,19 +72,19 @@
       border: 4px solid #be9b7b;
       border-radius: 10px;
     }
-    .about-section, .faq-section, .gallery-section, .contact-section, .map-section {
+    .about-section, .faq-section, .gallery-section, .map-section {
       padding: 60px 20px;
       background-color: #1c3a40;
       text-align: center;
     }
-    .about-section h2, .faq-section h2, .gallery-section h2, .contact-section h2, .map-section h2 {
-  color: #f5deb3 !important;
-  font-weight: bold;
-}
-    .about-section p, .faq-section p, .contact-section p {
-  color: #f5deb3 !important;
-  font-weight: normal;
-}
+    .about-section h2, .faq-section h2, .gallery-section h2, .map-section h2 {
+      color: #f5deb3 !important;
+      font-weight: bold;
+    }
+    .about-section p, .faq-section p {
+      color: #f5deb3 !important;
+      font-weight: normal;
+    }
     .gallery-grid {
       display: flex;
       flex-wrap: wrap;
@@ -104,26 +102,60 @@
       display: block;
       margin-bottom: 5px;
     }
-    form {
-      max-width: 500px;
-      margin: 0 auto;
+
+    /* Target accurate Contact Section styling from Screenshot 2026-06-13 at 2.30.51 PM.png */
+    .contact-section {
+      padding: 60px 20px;
+      background-color: #173135; /* Dark teal block background matching image */
+      text-align: center;
     }
-    input, textarea {
+    .contact-section h2 {
+      color: #f5deb3 !important;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .contact-section p {
+      color: #f5deb3 !important;
+      font-size: 1.3rem;
+      margin: 8px 0;
+      font-weight: normal;
+    }
+    .contact-section form {
+      max-width: 600px;
+      margin: 30px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .contact-section input, .contact-section textarea {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
+      padding: 16px;
+      margin: 0;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px; /* Clean rounded corners matching the UI image */
+      font-size: 1rem;
+      font-family: sans-serif;
+      background-color: #ffffff;
+      box-sizing: border-box;
     }
-    button[type="submit"] {
-      background-color: #8b1e1e;
+    .contact-section textarea {
+      resize: vertical;
+    }
+    .contact-section button[type="submit"] {
+      background-color: #8b1e1e; /* Precise maroon matching image */
       color: white;
       font-weight: bold;
       text-transform: uppercase;
-      padding: 10px 20px;
+      padding: 14px 40px;
       cursor: pointer;
       border: none;
+      border-radius: 2px;
+      align-self: center;
+      font-size: 1rem;
+      letter-spacing: 1px;
     }
+
     iframe {
       width: 100%;
       height: 300px;
@@ -146,42 +178,60 @@
       color: #f5deb3;
       font-size: 0.9rem;
       border-top: 2px solid #be9b7b;
+      margin-bottom: 50px; /* Offset spacing for the fixed bar */
     }
 
-.sticky-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #173135; /* Matching your color */
-  color: #f5deb3;
-  text-align: center;
-  padding: 14px 20px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.3);
-  gap: 15px;
-  flex-wrap: wrap;
-}
+    .sticky-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #173135;
+      color: #f5deb3;
+      text-align: center;
+      padding: 14px 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.3);
+      gap: 15px;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+    }
+    .toast-button {
+      background-color: #ff5c5c;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .toast-button:hover {
+      background-color: #e04848;
+    }
 
-.toast-button {
-  background-color: #ff5c5c;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 25px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
-
-.toast-button:hover {
-  background-color: #e04848;
-}
-
-
+    /* Low Impact YouTube Asset Container Setup */
+    .footer-video-section {
+      width: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* Fixed 16:9 widescreen layout aspect ratio */
+      height: 0;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
 
     @media (max-width: 768px) {
       header {
@@ -209,83 +259,73 @@
         align-items: center;
       }
       .gallery-grid img {
-  width: auto;
-  max-height: 300px;
-  max-width: 300px;
-  border-radius: 10px;
-  border: 2px solid #be9b7b;
-  object-fit: cover;
-  aspect-ratio: 1/1;
-}
+        width: auto;
+        max-height: 300px;
+        max-width: 300px;
+        border-radius: 10px;
+        border: 2px solid #be9b7b;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+      }
       .info-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
       }
     }
-      .scroll-animate {
+    
+    .scroll-animate {
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 0.8s ease-out, transform 0.8s ease-out;
       will-change: opacity, transform;
     }
-
     .scroll-animate.visible {
       opacity: 1;
       transform: translateY(0);
     }
-</style>
-<style>
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero button {
-    width: 100%;
-    font-size: 1rem;
-    padding: 14px;
-  }
-
-  header nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header nav a {
-    padding: 8px 0;
-    display: block;
-  }
-
-  .info-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  form input, form textarea {
-    font-size: 16px;
-  }
-
-  .faq-item {
-    padding: 0 10px;
-  }
-
-  iframe {
-    height: 300px !important;
-  }
-
-  .gallery-grid img {
-    max-width: 90vw;
-    height: auto;
-  }
-}
-</style>
-
-<style>
+  </style>
+  <style>
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .hero button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 14px;
+      }
+      header nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header nav a {
+        padding: 8px 0;
+        display: block;
+      }
+      .info-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      form input, form textarea {
+        font-size: 16px;
+      }
+      .faq-item {
+        padding: 0 10px;
+      }
+      iframe {
+        height: 300px !important;
+      }
+      .gallery-grid img {
+        max-width: 90vw;
+        height: auto;
+      }
+    }
+  </style>
+  <style>
     #preloader {
       position: fixed;
       top: 0;
@@ -299,28 +339,22 @@
       z-index: 9999;
     }
     #preloader img {
-  width: 120px;
-  animation: growSpin 1.5s ease-in-out forwards;
-}
-    @keyframes growSpin {
-  0% { transform: scale(1) rotate(0deg); opacity: 0; }
-  50% { transform: scale(2.5) rotate(180deg); opacity: 1; }
-  100% { transform: scale(3) rotate(360deg); opacity: 0; }
-}
-  50% { transform: scale(2.5) rotate(180deg); opacity: 1; }
-  100% { transform: scale(3) rotate(360deg); opacity: 0; }
-}
-  50% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
-}
-      to { transform: rotate(360deg); }
+      width: 120px;
+      animation: growSpin 1.5s ease-in-out forwards;
     }
-</style>
+    @keyframes growSpin {
+      0% { transform: scale(1) rotate(0deg); opacity: 0; }
+      50% { transform: scale(2.5) rotate(180deg); opacity: 1; }
+      100% { transform: scale(3) rotate(360deg); opacity: 0; }
+    }
+  </style>
 </head>
 <body>
+
 <div id="preloader">
   <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/f62a3c5a-56e7-4d25-aa8a-b6c2e045482a/oc_lobster_pot_no_background.png?format=750w" alt="Loading...">
 </div>
+
 <script>
   window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
@@ -331,6 +365,7 @@
     }, 500);
   });
 </script>
+
 <header>
   <div style="font-size: 1.5rem; font-weight: bold;">OC LOBSTER POT</div>
   <nav>
@@ -352,42 +387,33 @@
 
 <section class="feature scroll-animate" id="menu">
   <h2>Signature Dish</h2>
-<p> Traditional Lobster Roll </p>
+  <p>Traditional Lobster Roll</p>
   <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/230f6f1c-bf0b-4d2a-9af6-82598b954693/PERFECT+LOBSTER+ROLL.png?format=2500w" alt="Lobster Roll" />
 </section>
 
 <section class="about-section scroll-animate" id="about">
   <h2>About Us</h2>
-  <p>Welcome to OC Lobster Pot — Ocean City’s New Seafood Spot
-We’re the new kids on the boardwalk, but we’re bringing big flavor and even bigger heart. Born from a love for bold lobster rolls, fresh coastal bites, and that laid-back Ocean City vibe, OC Lobster Pot is here to shake up your shore eats. Whether you’re grabbing a roll to-go, diving into seafood fries, or sipping something cold with friends, we’re all about good food, good people, and good times by the beach. Come taste what’s next.</p>
+  <p>Welcome to OC Lobster Pot — Ocean City’s New Seafood Spot. We’re the new kids on the boardwalk, but we’re bringing big flavor and even bigger heart. Born from a love for bold lobster rolls, fresh coastal bites, and that laid-back Ocean City vibe, OC Lobster Pot is here to shake up your shore eats. Whether you’re grabbing a roll to-go, diving into seafood fries, or sipping something cold with friends, we’re all about good food, good people, and good times by the beach. Come taste what’s next.</p>
 </section>
 
 <section class="gallery-section scroll-animate" id="gallery">
   <h2>Gallery</h2>
   <div class="gallery-grid" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
-    <div style="display: flex; gap: 20px; justify-content: center;">
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
       <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/a41e507a-fe24-4681-b20e-25f37d048898/1FB34EAE-1B99-4D12-A5E8-1CCE7AD0F4DD_1_102_a.jpeg?format=750w" alt="Lobster Roll" style="width: 200px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
       <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/44cefb59-4dbc-4abc-8e75-cd81a5f1939a/Screenshot+2025-07-25+at+12.35.04%E2%80%AFAM.png?format=750w" alt="OC Rainbow Roll" style="width: 200px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
-	<img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/d0a7e522-3280-4998-bde3-f5b3dbd70539/C11F2550-D454-427A-86F5-F19DB6144532_1_102_o.jpeg?format=750w" alt="OC Rainbow Roll" style="width: 200px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
-<img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/bc3d3771-a7e8-420e-b7ac-206a22ee7048/Screenshot+2025-07-25+at+12.32.42%E2%80%AFAM.png?format=750w" alt="OC Rainbow Roll" style="width: 200px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
-
-
-  </div>
-    <div style="margin-top: 10px;">
+      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/d0a7e522-3280-4998-bde3-f5b3dbd70539/C11F2550-D454-427A-86F5-F19DB6144532_1_102_o.jpeg?format=750w" alt="OC Rainbow Roll" style="width: 200px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
+      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/bc3d3771-a7e8-420e-b7ac-206a22ee7048/Screenshot+2025-07-25+at+12.32.42%E2%80%AFAM.png?format=750w" alt="OC Rainbow Roll" style="width: 200px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
+    </div>
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
       <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/b887480d-9ebb-4851-b028-eb26b2816aac/870D692C-E701-4D05-B9C3-DB3EA1F16F14_1_102_o.jpeg?format=750w" alt="Ocean View" style="width: 400px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
-<img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/80fdd258-b660-444e-ab12-ee2aa27a76af/DF821C15-B7DB-4542-8375-32C98921FA8C_1_102_o.jpeg?format=2500w" alt="Ocean View" style="width: 400px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
-
-
-
+      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/80fdd258-b660-444e-ab12-ee2aa27a76af/DF821C15-B7DB-4542-8375-32C98921FA8C_1_102_o.jpeg?format=2500w" alt="Ocean View" style="width: 400px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
     </div>
-
-
-    </div>
-  <h2>Ocean City's Biggest Seafood Restaurant</h2>
-    <div style="margin-top: 10px;">
-      <img src="https://images.squarespace-cdn.com/content/v1/680957fb9fc9745e8062803e/f3afabb4-cbbd-4576-beaa-2fc3564512ce/IMG_9060.jpg?format=2500w" alt="Ocean View" style="width: 400px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
- <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/450d3847-2405-4863-afad-4582d5263de9/IMG_9423.jpeg?format=750w" alt="Ocean View" style="width: 400px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
-    </div>
+  </div>
+  <h2 style="margin-top: 40px;">Ocean City's Biggest Seafood Restaurant</h2>
+  <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 10px;">
+    <img src="https://images.squarespace-cdn.com/content/v1/680957fb9fc9745e8062803e/f3afabb4-cbbd-4576-beaa-2fc3564512ce/IMG_9060.jpg?format=2500w" alt="Ocean View" style="width: 400px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
+    <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/450d3847-2405-4863-afad-4582d5263de9/IMG_9423.jpeg?format=750w" alt="Ocean View" style="width: 400px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; border: 2px solid #be9b7b;" />
   </div>
 </section>
 
@@ -435,49 +461,39 @@ We’re the new kids on the boardwalk, but we’re bringing big flavor and even 
   </div>
 </section>
 
-
 <section class="scroll-animate" style="background-color:#173135; padding: 60px 20px; text-align: center;">
   <h2 style="color: #f5deb3; font-weight: bold;">What Our Guests Are Saying</h2>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
-
-    <!-- Shaylee Whisman -->
     <div style="background-color: #1c3a40; border: 2px solid #be9b7b; border-radius: 10px; padding: 20px; max-width: 350px; text-align: left;">
       <p style="color: #f5deb3;"><strong>Shaylee Whisman ★★★★★</strong></p>
       <p style="color: #f5deb3;">"This place is a 10 out of 10. The Boba drinks were amazing. The sushi was incredible. My son’s kids burgers and fries were a delicacy. The prices are fair. Definitely recommend a great addition to Ocean City!!!!"</p>
       <p style="color: #f5deb3; font-style: italic;">Food: 5/5 | Service: 5/5 | Atmosphere: 5/5</p>
     </div>
-
-    <!-- Gabrielle Carlisle -->
     <div style="background-color: #1c3a40; border: 2px solid #be9b7b; border-radius: 10px; padding: 20px; max-width: 350px; text-align: left;">
       <p style="color: #f5deb3;"><strong>Gabrielle Carlisle ★★★★★</strong></p>
       <p style="color: #f5deb3;">"Excellent food, excellent service. The price is perfect, and the robot was so cool — what a treat!!!!"</p>
       <p style="color: #f5deb3; font-style: italic;">Food: 5/5 | Service: 5/5 | Atmosphere: 5/5</p>
     </div>
-
-    <!-- Haris L -->
     <div style="background-color: #1c3a40; border: 2px solid #be9b7b; border-radius: 10px; padding: 20px; max-width: 350px; text-align: left;">
       <p style="color: #f5deb3;"><strong>Haris L ★★★★★</strong></p>
       <p style="color: #f5deb3;">"This is a new favorite in OC!!! The service was great and the food was even better. The cilantro lobster roll shivered my timbers it was so good! Normally I can’t get my son to sit still but when he had the OC crab pot he was locked in. Highly recommend!!!!"</p>
     </div>
-
-    <!-- Ya Ouyang -->
     <div style="background-color: #1c3a40; border: 2px solid #be9b7b; border-radius: 10px; padding: 20px; max-width: 350px; text-align: left;">
       <p style="color: #f5deb3;"><strong>Ya Ouyang ★★★★★</strong></p>
       <p style="color: #f5deb3;">"This place is a total gem on the Ocean City boardwalk! Whether you're looking for a quick breakfast, a relaxing dinner, or a full-on seafood feast, this spot truly has it all."</p>
     </div>
-
   </div>
-  <a href="https://www.google.com/search?q=oc+lobster+pot&rlz=1C5OZZY_enUS1159US1159&oq=oc+&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMhUIARAuGEMYrwEYxwEYgAQYigUYjgUyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDwyBggFEEUYPDIGCAYQRRg8MgYIBxBFGEHSAQc2MTdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x89c09500028c3887:0x686d2e5cd011cfa1,1,,,," target="_blank" style="display: inline-block; margin-top: 40px; color: #f5deb3; border: 2px solid #be9b7b; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold;">See More Reviews →</a>
+  <a href="https://www.google.com/search?q=oc+lobster+pot" target="_blank" style="display: inline-block; margin-top: 40px; color: #f5deb3; border: 2px solid #be9b7b; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold;">See More Reviews →</a>
 </section>
-
 
 <section class="map-section scroll-animate">
   <h2>Find Us</h2>
   <iframe 
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3089.024310221947!2d-74.5752365!3d39.2788387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c0ecb7cc20fd2b%3A0xf9e347a97979c873!2s984%20Boardwalk%2C%20Ocean%20City%2C%20NJ%2008226!5e0!3m2!1sen!2sus!4v1716326322005!5m2!1sen!2sus"
     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+  </table>
 </section>
+
 <section style="padding: 60px 20px; background-color: #1c3a40; text-align: center;" id="menu-pdf">
   <h2 style="color: #f5deb3;">View Our Menu</h2>
   <iframe 
@@ -488,22 +504,41 @@ We’re the new kids on the boardwalk, but we’re bringing big flavor and even 
   </iframe>
 </section>
 
+<!-- Functional Contact Form linked via Web3Forms API -->
 <section class="contact-section scroll-animate" id="contact">
   <h2>Contact Us</h2>
-<p>📞 Phone: 609-814-2393</p>
-<p> Email Contact: info@oclobsterpot.com </p>
-  <form>
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea placeholder="Your Message" rows="5" required></textarea>
+  <p>📞 Phone: 609-814-2393</p>
+  <p>Email Contact: info@oclobsterpot.com</p>
+  
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <!-- Go to web3forms.com, put your email in, get a key, and swap it here -->
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+    
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
     <button type="submit">Send</button>
   </form>
 </section>
 
+<!-- Optional Footer Video Container Component -->
+<!-- If you decide to add the footage later, change display: none to block -->
+<section class="footer-video-section" style="display: none;">
+  <div class="video-wrapper">
+    <!-- Replace YOUTUBE_VIDEO_ID with the unlisted clip address hash -->
+    <iframe 
+      src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID?autoplay=1&mute=1&controls=0&loop=1&playlist=YOUTUBE_VIDEO_ID&modestbranding=1&rel=0" 
+      frameborder="0" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
 
 <footer>
   &copy; 2025 OC Lobster Pot. All rights reserved. / Website created by @danielxiee
 </footer>
+
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -524,7 +559,6 @@ We’re the new kids on the boardwalk, but we’re bringing big flavor and even 
   <a href="https://order.toasttab.com/online/ocean-city-984-boardwalk" class="toast-button">Order with Toast</a>
 </div>
 
-<!-- Floating OC Lobster Pot Visitor Center Poster -->
 <div class="floating-card" id="visitorPoster">
   <button class="close-btn" onclick="document.getElementById('visitorPoster').style.display='none';">×</button>
   <a href="https://drive.google.com/file/d/1ZYgsbTMzFkxnNhUBdAsgZnoHnX1b5HzX/preview" target="_blank">
@@ -542,11 +576,9 @@ We’re the new kids on the boardwalk, but we’re bringing big flavor and even 
     transition: transform 0.3s ease;
     background: transparent;
   }
-
   .floating-card:hover {
     transform: scale(1.05);
   }
-
   .floating-card img {
     width: 100%;
     height: auto;
@@ -554,7 +586,6 @@ We’re the new kids on the boardwalk, but we’re bringing big flavor and even 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
     display: block;
   }
-
   .close-btn {
     position: absolute;
     top: -10px;
@@ -569,16 +600,12 @@ We’re the new kids on the boardwalk, but we’re bringing big flavor and even 
     cursor: pointer;
     z-index: 1001;
   }
-
   @media (max-width: 480px) {
     .floating-card {
       display: none;
     }
   }
 </style>
-
-
-
 
 </body>
 </html>
