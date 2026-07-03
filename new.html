@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OC Lobster Pot — Fresh Seafood on the Ocean City Boardwalk</title>
+<meta name="description" content="Lobster rolls, sushi, boba and coastal bites at 984 Boardwalk, Ocean City NJ. Open daily 11 AM–10 PM. Order online with Toast." />
+<link rel="icon" href="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/f62a3c5a-56e7-4d25-aa8a-b6c2e045482a/oc_lobster_pot_no_background.png?format=750w" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="OC Lobster Pot — Ocean City Boardwalk" />
+<meta property="og:description" content="Lobster rolls, sushi, boba and coastal bites at 984 Boardwalk. Order online." />
+<!-- SWAP: og:image → OCLobsterPot-Ocean City_Hero.jpg on R2 (1200x630 crop) -->
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/230f6f1c-bf0b-4d2a-9af6-82598b954693/PERFECT+LOBSTER+ROLL.png?format=2500w" />
+<meta property="og:type" content="website" />
+
+<!-- ============================================================
+     IMAGE SWAP GUIDE — upload the new pro shots to R2, then
+     search this file for "SWAP" to find every slot:
+       HERO    -> OCLobsterPot-Ocean City_Hero.jpg (the big spread)
+       DISH 1  -> LY8A0082.jpg (whole lobster plate)
+       DISH 2  -> a sushi shot
+       DISH 3  -> Shoreline Cheeseburger & Traditional Lemonade.jpg
+       GALLERY -> any 6-9 favorites
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Outfit:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --wood:#1D140D;          /* page background — dark walnut */
+  --plank:#2A1D12;         /* card surfaces */
+  --edge:#4A331F;          /* borders — worn wood edge */
+  --board:#2E7CA8;         /* the painted blue serving board */
+  --board-deep:#1B4C68;
+  --lobster:#E04E2A;       /* vibrant lobster red */
+  --lobster-dark:#A93318;
+  --butter:#F5E3C2;        /* cream text */
+  --sand:#C9A876;          /* muted gold / seasoning */
+  --ink-soft:#D8C4A6;      /* body text on dark */
+  --display:'Alfa Slab One', serif;
+  --body:'Outfit', sans-serif;
+  --mono:'IBM Plex Mono', monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);
+  background:var(--wood);
+  color:var(--ink-soft);
+  line-height:1.6;
+  font-size:17px;
+}
+img{max-width:100%;display:block}
+a{color:var(--sand)}
+:focus-visible{outline:3px solid var(--board);outline-offset:3px;border-radius:4px}
+
+/* ---------- catch tag (section label) ---------- */
+.tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--sand);
+  border:1.5px solid var(--edge);
+  border-radius:999px;padding:6px 16px 6px 10px;margin-bottom:18px;
+}
+.tag::before{
+  content:"";width:9px;height:9px;border-radius:50%;
+  border:1.5px solid var(--sand);
+}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:900;
+  background:rgba(29,20,13,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1.5px solid var(--edge);
+  padding:12px clamp(16px,4vw,48px);
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--butter)}
+.brand img{width:44px;height:44px;object-fit:contain}
+.brand span{font-family:var(--display);font-size:1.05rem;letter-spacing:.02em}
+nav{display:flex;align-items:center;gap:clamp(10px,2vw,26px);flex-wrap:wrap}
+nav a{color:var(--butter);text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--lobster)}
+.btn{
+  display:inline-block;background:var(--lobster);color:#fff;
+  font-weight:700;text-decoration:none;text-transform:uppercase;
+  letter-spacing:.06em;font-size:.9rem;
+  padding:12px 22px;border:none;border-radius:999px;cursor:pointer;
+  box-shadow:0 3px 0 var(--lobster-dark);
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 var(--lobster-dark)}
+.btn:active{transform:translateY(1px);box-shadow:0 2px 0 var(--lobster-dark)}
+.btn.ghost{
+  background:transparent;color:var(--butter);
+  border:2px solid var(--butter);box-shadow:none;
+}
+.btn.ghost:hover{background:var(--butter);color:var(--wood)}
+
+/* ---------- hero: full-bleed photo ---------- */
+.hero{
+  position:relative;
+  min-height:min(88vh,760px);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  overflow:hidden;
+}
+.hero .bg{
+  position:absolute;inset:0;
+  /* SWAP: HERO -> OCLobsterPot-Ocean City_Hero.jpg on R2 */
+  background:url('https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/80fdd258-b660-444e-ab12-ee2aa27a76af/DF821C15-B7DB-4542-8375-32C98921FA8C_1_102_o.jpeg?format=2500w') center/cover no-repeat;
+  transform:scale(1.04);
+}
+.hero .shade{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(29,20,13,.55) 0%, rgba(29,20,13,.15) 35%, rgba(29,20,13,.88) 100%);
+}
+.hero .content{
+  position:relative;z-index:2;
+  padding:0 clamp(20px,6vw,72px) clamp(44px,7vw,80px);
+  max-width:820px;
+}
+.hero .kicker{
+  font-family:var(--mono);letter-spacing:.35em;text-transform:uppercase;
+  font-size:clamp(.75rem,1.4vw,.95rem);color:var(--sand);margin-bottom:12px;
+}
+.hero h1{
+  font-family:var(--display);
+  font-size:clamp(2.4rem,7vw,5.2rem);
+  line-height:1.02;
+  text-transform:uppercase;
+  color:var(--butter);
+  text-shadow:0 4px 24px rgba(0,0,0,.5);
+  margin-bottom:16px;
+}
+.hero h1 em{font-style:normal;color:var(--lobster)}
+.hero .sub{
+  font-size:clamp(1.02rem,2vw,1.25rem);
+  color:var(--butter);font-weight:500;max-width:520px;margin-bottom:26px;
+}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+
+/* marquee ticker */
+.ticker{
+  background:var(--board);color:var(--wood);
+  overflow:hidden;white-space:nowrap;
+  border-top:1.5px solid var(--board-deep);
+  border-bottom:1.5px solid var(--board-deep);
+}
+.ticker-track{
+  display:inline-block;padding:10px 0;
+  font-family:var(--mono);font-size:.85rem;font-weight:500;
+  letter-spacing:.22em;text-transform:uppercase;
+  animation:scroll 28s linear infinite;
+}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:clamp(56px,8vw,100px) clamp(20px,5vw,60px)}
+.wrap{max-width:1100px;margin:0 auto}
+h2{
+  font-family:var(--display);color:var(--butter);
+  font-size:clamp(1.7rem,4vw,2.6rem);line-height:1.15;margin-bottom:16px;
+}
+.lead{max-width:640px;font-size:1.08rem}
+
+/* ---------- the catch (signature dishes) ---------- */
+.alt{background:var(--plank)}
+.dish-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:26px;margin-top:36px;
+}
+.dish{
+  background:var(--wood);border:1.5px solid var(--edge);border-radius:14px;
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.dish:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(0,0,0,.45);border-color:var(--board)}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.dish .body{padding:18px 20px 22px;border-top:3px solid var(--board)}
+.dish h3{font-family:var(--display);font-size:1.15rem;color:var(--butter);margin-bottom:6px}
+.dish p{font-size:.95rem}
+
+/* ---------- gallery ---------- */
+.gallery-grid{
+  columns:3;column-gap:16px;margin-top:36px;
+}
+.gallery-grid img{
+  width:100%;margin-bottom:16px;border-radius:12px;
+  border:1.5px solid var(--edge);break-inside:avoid;
+  transition:border-color .2s ease;
+}
+.gallery-grid img:hover{border-color:var(--board)}
+@media (max-width:820px){.gallery-grid{columns:2}}
+@media (max-width:520px){.gallery-grid{columns:1}}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--board-deep)}
+.reviews h2{color:#EAF4FA}
+.postcards{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;margin-top:36px;
+}
+.postcard{
+  background:var(--butter);color:#3A2A18;
+  border-radius:6px;
+  padding:22px 22px 18px;position:relative;
+  box-shadow:5px 5px 0 rgba(0,0,0,.3);
+}
+.postcard:nth-child(odd){transform:rotate(-1.2deg)}
+.postcard:nth-child(even){transform:rotate(1deg)}
+.postcard .stamp{
+  position:absolute;top:12px;right:12px;
+  width:38px;height:46px;border:1.5px dashed var(--lobster);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.15rem;
+}
+.postcard .stars{color:var(--lobster);letter-spacing:2px;margin-bottom:8px;font-size:.95rem}
+.postcard blockquote{font-size:.97rem;margin-bottom:12px}
+.postcard cite{
+  font-family:var(--mono);font-style:normal;font-size:.78rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--board-deep);
+}
+.reviews .more{margin-top:36px;text-align:center}
+.reviews .more .btn.ghost{color:#EAF4FA;border-color:#EAF4FA}
+.reviews .more .btn.ghost:hover{background:#EAF4FA;color:var(--board-deep)}
+
+/* ---------- menu ---------- */
+.menu-cta{
+  position:relative;text-align:center;overflow:hidden;
+}
+.menu-cta .bg{
+  position:absolute;inset:0;
+  /* SWAP: a second wide food shot for the menu banner */
+  background:url('https://images.squarespace-cdn.com/content/v1/680957fb9fc9745e8062803e/f3afabb4-cbbd-4576-beaa-2fc3564512ce/IMG_9060.jpg?format=2500w') center/cover no-repeat;
+}
+.menu-cta .shade{position:absolute;inset:0;background:rgba(29,20,13,.82)}
+.menu-cta .wrap{position:relative;z-index:2}
+.menu-cta p{max-width:560px;margin:0 auto 28px;color:var(--butter)}
+
+/* ---------- FAQ ---------- */
+.faq details{
+  border-bottom:1.5px solid var(--edge);
+  padding:16px 4px;
+}
+.faq summary{
+  cursor:pointer;font-weight:700;color:var(--butter);
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--display);color:var(--lobster);font-size:1.2rem}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding-top:10px;max-width:680px}
+
+/* ---------- find us / contact ---------- */
+.find{background:var(--plank)}
+.find .cols{
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:36px;align-items:start;
+}
+@media (max-width:820px){.find .cols{grid-template-columns:1fr}}
+.find iframe{
+  width:100%;height:340px;border:1.5px solid var(--edge);border-radius:12px;
+  filter:saturate(.85);
+}
+.info-line{display:flex;gap:10px;align-items:baseline;margin-bottom:10px;font-size:1.02rem;color:var(--butter)}
+.info-line .k{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--board);min-width:74px}
+form{display:flex;flex-direction:column;gap:14px;margin-top:20px}
+input,textarea{
+  font-family:var(--body);font-size:1rem;padding:14px 16px;
+  border:1.5px solid var(--edge);border-radius:10px;
+  background:var(--wood);color:var(--butter);width:100%;
+}
+input::placeholder,textarea::placeholder{color:#8A755C}
+textarea{resize:vertical;min-height:130px}
+.find h3{font-family:var(--display);color:var(--butter);margin-bottom:4px}
+
+/* ---------- footer ---------- */
+footer{
+  background:#140D08;color:var(--sand);
+  text-align:center;padding:34px 20px 110px;
+  font-size:.9rem;border-top:1.5px solid var(--edge);
+}
+footer .foot-brand{font-family:var(--display);color:var(--butter);font-size:1.1rem;margin-bottom:8px}
+
+/* ---------- sticky order bar ---------- */
+.orderbar{
+  position:fixed;bottom:0;left:0;right:0;z-index:950;
+  background:rgba(29,20,13,.95);backdrop-filter:blur(8px);
+  border-top:1.5px solid var(--edge);
+  display:flex;justify-content:center;align-items:center;gap:16px;
+  padding:12px 16px;flex-wrap:wrap;
+}
+.orderbar span{font-weight:700;color:var(--butter)}
+
+/* ---------- motion ---------- */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .ticker-track{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="#top">
+    <!-- SWAP: logo (white/cream version reads best on dark) -->
+    <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/f62a3c5a-56e7-4d25-aa8a-b6c2e045482a/oc_lobster_pot_no_background.png?format=750w" alt="OC Lobster Pot logo" />
+    <span>OC Lobster Pot</span>
+  </a>
+  <nav>
+    <a href="#catch">The Catch</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#find">Find Us</a>
+    <a class="btn" href="https://order.toasttab.com/online/ocean-city-984-boardwalk">Order Online</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top" style="padding:0">
+  <div class="bg" role="img" aria-label="Seafood spread at OC Lobster Pot"></div>
+  <div class="shade"></div>
+  <div class="content">
+    <p class="kicker">984 Boardwalk · Ocean City, NJ</p>
+    <h1>Fresh Off the Boat.<br><em>Straight to the Boardwalk.</em></h1>
+    <p class="sub">Lobster rolls, whole lobster pots, sushi and boba — the biggest seafood spot on the Ocean City boardwalk.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://order.toasttab.com/online/ocean-city-984-boardwalk">Order with Toast</a>
+      <a class="btn ghost" href="#catch">See the Catch</a>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    Fresh Daily &nbsp;✦&nbsp; Lobster Rolls &nbsp;✦&nbsp; Whole Lobster Pots &nbsp;✦&nbsp; Sushi &nbsp;✦&nbsp; Boba &nbsp;✦&nbsp; Open 11 AM – 10 PM &nbsp;✦&nbsp;
+    Fresh Daily &nbsp;✦&nbsp; Lobster Rolls &nbsp;✦&nbsp; Whole Lobster Pots &nbsp;✦&nbsp; Sushi &nbsp;✦&nbsp; Boba &nbsp;✦&nbsp; Open 11 AM – 10 PM &nbsp;✦&nbsp;
+  </div>
+</div>
+
+<!-- ================= THE CATCH ================= -->
+<section class="alt reveal" id="catch">
+  <div class="wrap">
+    <span class="tag">Catch № 01 — Signatures</span>
+    <h2>The Catch of the Day, Every Day</h2>
+    <p class="lead">Big flavor, bigger heart. These are the plates people cross the boardwalk for.</p>
+    <div class="dish-grid">
+      <article class="dish">
+        <!-- SWAP: DISH 1 -> LY8A0082.jpg (whole lobster plate) -->
+        <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/230f6f1c-bf0b-4d2a-9af6-82598b954693/PERFECT+LOBSTER+ROLL.png?format=2500w" alt="Whole lobster plate" loading="lazy" />
+        <div class="body">
+          <h3>The Lobster Pot</h3>
+          <p>A whole lobster, seasoned and piled high with corn, sausage and lemon. The namesake.</p>
+        </div>
+      </article>
+      <article class="dish">
+        <!-- SWAP: DISH 2 -> sushi shot -->
+        <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/44cefb59-4dbc-4abc-8e75-cd81a5f1939a/Screenshot+2025-07-25+at+12.35.04%E2%80%AFAM.png?format=750w" alt="OC Rainbow sushi roll" loading="lazy" />
+        <div class="body">
+          <h3>OC Rainbow Roll</h3>
+          <p>Fresh sushi with a shore-town twist — as bright as the boardwalk at sunset.</p>
+        </div>
+      </article>
+      <article class="dish">
+        <!-- SWAP: DISH 3 -> Shoreline Cheeseburger & Traditional Lemonade.jpg -->
+        <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/a41e507a-fe24-4681-b20e-25f37d048898/1FB34EAE-1B99-4D12-A5E8-1CCE7AD0F4DD_1_102_a.jpeg?format=750w" alt="Shoreline cheeseburger with fries and lemonade" loading="lazy" />
+        <div class="body">
+          <h3>Shoreline Cheeseburger</h3>
+          <p>For the land-lovers: a stacked burger, crispy fries and a fresh-squeezed lemonade.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="reveal" id="about">
+  <div class="wrap">
+    <span class="tag">Catch № 02 — Our Story</span>
+    <h2>The New Kids on the Boardwalk</h2>
+    <p class="lead">Born from a love for bold lobster rolls, fresh coastal bites, and that laid-back Ocean City vibe, OC Lobster Pot is here to shake up your shore eats. Whether you're grabbing a roll to-go, diving into a whole lobster pot, or sipping boba with friends, we're all about good food, good people, and good times by the beach. Come taste what's next.</p>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="alt reveal" id="gallery">
+  <div class="wrap">
+    <span class="tag">Catch № 03 — Gallery</span>
+    <h2>Fresh From the Kitchen</h2>
+    <div class="gallery-grid">
+      <!-- SWAP: GALLERY -> drop in 6-9 of the new pro shots; masonry auto-flows -->
+      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/b887480d-9ebb-4851-b028-eb26b2816aac/870D692C-E701-4D05-B9C3-DB3EA1F16F14_1_102_o.jpeg?format=750w" alt="Inside OC Lobster Pot" loading="lazy" />
+      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/d0a7e522-3280-4998-bde3-f5b3dbd70539/C11F2550-D454-427A-86F5-F19DB6144532_1_102_o.jpeg?format=750w" alt="Fresh seafood dish" loading="lazy" />
+      <img src="https://images.squarespace-cdn.com/content/v1/680957fb9fc9745e8062803e/f3afabb4-cbbd-4576-beaa-2fc3564512ce/IMG_9060.jpg?format=2500w" alt="Dining room" loading="lazy" />
+      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/bc3d3771-a7e8-420e-b7ac-206a22ee7048/Screenshot+2025-07-25+at+12.32.42%E2%80%AFAM.png?format=750w" alt="Sushi plate" loading="lazy" />
+      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/450d3847-2405-4863-afad-4582d5263de9/IMG_9423.jpeg?format=750w" alt="Restaurant interior" loading="lazy" />
+      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/80fdd258-b660-444e-ab12-ee2aa27a76af/DF821C15-B7DB-4542-8375-32C98921FA8C_1_102_o.jpeg?format=2500w" alt="Boardwalk view" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="reviews reveal" id="reviews">
+  <div class="wrap">
+    <span class="tag" style="color:#EAF4FA;border-color:#3E7FA3">Catch № 04 — Mail Call</span>
+    <h2>Postcards from Our Guests</h2>
+    <div class="postcards">
+      <article class="postcard">
+        <div class="stamp">🦞</div>
+        <div class="stars">★★★★★</div>
+        <blockquote>"This place is a 10 out of 10. The boba drinks were amazing. The sushi was incredible. The prices are fair. A great addition to Ocean City!"</blockquote>
+        <cite>— Shaylee W.</cite>
+      </article>
+      <article class="postcard">
+        <div class="stamp">🌊</div>
+        <div class="stars">★★★★★</div>
+        <blockquote>"Excellent food, excellent service. The price is perfect, and the robot was so cool — what a treat!"</blockquote>
+        <cite>— Gabrielle C.</cite>
+      </article>
+      <article class="postcard">
+        <div class="stamp">🦀</div>
+        <div class="stars">★★★★★</div>
+        <blockquote>"A new favorite in OC! The cilantro lobster roll shivered my timbers it was so good. My son had the OC crab pot and was locked in. Highly recommend!"</blockquote>
+        <cite>— Haris L.</cite>
+      </article>
+      <article class="postcard">
+        <div class="stamp">🐚</div>
+        <div class="stars">★★★★★</div>
+        <blockquote>"A total gem on the Ocean City boardwalk! Quick breakfast, relaxing dinner, or a full-on seafood feast — this spot truly has it all."</blockquote>
+        <cite>— Ya O.</cite>
+      </article>
+    </div>
+    <div class="more">
+      <a class="btn ghost" href="https://www.google.com/search?q=oc+lobster+pot" target="_blank" rel="noopener">Read More Reviews</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section class="menu-cta reveal" id="menu">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="shade" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="tag" style="color:var(--butter);border-color:var(--butter)">Catch № 05 — Menu</span>
+    <h2>Hungry Yet?</h2>
+    <p>Browse the full menu — rolls, pots, sushi, boba and more — and order ahead for pickup right on the boardwalk.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a class="btn" href="https://order.toasttab.com/online/ocean-city-984-boardwalk">View Menu &amp; Order</a>
+      <!-- SWAP (optional): host menu PDF on R2 and link it here -->
+      <a class="btn ghost" href="https://drive.google.com/file/d/1YHzNtdDrjburHi8TOsGh20RUlTfQrWNr/preview" target="_blank" rel="noopener">Menu PDF</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq reveal" id="faq">
+  <div class="wrap">
+    <span class="tag">Catch № 06 — Good to Know</span>
+    <h2>Frequently Asked Questions</h2>
+    <details><summary>What are your hours?</summary><p>We're open daily from 11 AM to 10 PM.</p></details>
+    <details><summary>Are you open year-round?</summary><p>We're open seasonally, mid-March through October 31st.</p></details>
+    <details><summary>Indoor or outdoor seating?</summary><p>We offer indoor seating.</p></details>
+    <details><summary>Do you deliver?</summary><p>Yes — find us on Grubhub and Uber Eats.</p></details>
+    <details><summary>Do you accommodate food allergies?</summary><p>Of course. Tell your server about any allergies — we always ask and accommodate carefully.</p></details>
+    <details><summary>Vegetarian or non-seafood options?</summary><p>Yes, we have vegetarian and non-seafood options.</p></details>
+    <details><summary>Can I customize my order?</summary><p>We prefer to avoid customizations to keep quality and consistency high.</p></details>
+    <details><summary>Is there parking nearby?</summary><p>We're right on the boardwalk — parking is available around town.</p></details>
+    <details><summary>Are pets allowed?</summary><p>No pets, due to possible customer allergies.</p></details>
+    <details><summary>Private events or catering?</summary><p>Absolutely — email <a href="mailto:info@oclobsterpot.com">info@oclobsterpot.com</a> to make arrangements.</p></details>
+  </div>
+</section>
+
+<!-- ================= FIND US + CONTACT ================= -->
+<section class="find reveal" id="find">
+  <div class="wrap">
+    <span class="tag">Catch № 07 — Drop a Line</span>
+    <h2>Find Us on the Boardwalk</h2>
+    <div class="cols">
+      <div>
+        <div class="info-line"><span class="k">Where</span><span>984 Boardwalk, Ocean City, NJ 08226</span></div>
+        <div class="info-line"><span class="k">Hours</span><span>Daily 11 AM – 10 PM (mid-March – Oct 31)</span></div>
+        <div class="info-line"><span class="k">Phone</span><span><a href="tel:6098142393">609-814-2393</a></span></div>
+        <div class="info-line"><span class="k">Email</span><span><a href="mailto:info@oclobsterpot.com">info@oclobsterpot.com</a></span></div>
+        <iframe
+          title="Map to OC Lobster Pot"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3089.024310221947!2d-74.5752365!3d39.2788387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c0ecb7cc20fd2b%3A0xf9e347a97979c873!2s984%20Boardwalk%2C%20Ocean%20City%2C%20NJ%2008226!5e0!3m2!1sen!2sus!4v1716326322005!5m2!1sen!2sus"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="margin-top:14px"></iframe>
+      </div>
+      <div>
+        <h3>Send Us a Message</h3>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="574defa9-86fe-46cd-8171-5276e8b2645f">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" placeholder="Your message" required></textarea>
+          <button class="btn" type="submit" style="align-self:flex-start">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-brand">OC Lobster Pot</div>
+  <p>984 Boardwalk, Ocean City, NJ · Open Daily 11 AM – 10 PM</p>
+  <p style="margin-top:8px">&copy; 2026 OC Lobster Pot. All rights reserved. · Website by @danielxiee</p>
+</footer>
+
+<div class="orderbar">
+  <span>Hungry? Skip the line.</span>
+  <a class="btn" href="https://order.toasttab.com/online/ocean-city-984-boardwalk">Order with Toast</a>
+</div>
+
+<script>
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+  });
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
