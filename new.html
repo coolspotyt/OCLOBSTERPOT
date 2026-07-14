@@ -11,7 +11,7 @@
 <meta property="og:title" content="OC Lobster Pot — Ocean City Boardwalk" />
 <meta property="og:description" content="Lobster rolls, sushi, boba and coastal bites at 984 Boardwalk. Order online." />
 <!-- SWAP: og:image → OCLobsterPot-Ocean City_Hero.jpg on R2 (1200x630 crop) -->
-<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/230f6f1c-bf0b-4d2a-9af6-82598b954693/PERFECT+LOBSTER+ROLL.png?format=2500w" />
+<meta property="og:image" content="https://oclobsterpot.vercel.app/OCLobsterPot-Ocean%20City_Hero.jpg" />
 <meta property="og:type" content="website" />
 
 <!-- ============================================================
@@ -112,7 +112,7 @@ nav a:hover{color:var(--lobster)}
 .hero .bg{
   position:absolute;inset:0;
   /* SWAP: HERO -> OCLobsterPot-Ocean City_Hero.jpg on R2 */
-  background:url('https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/80fdd258-b660-444e-ab12-ee2aa27a76af/DF821C15-B7DB-4542-8375-32C98921FA8C_1_102_o.jpeg?format=2500w') center/cover no-repeat;
+  background:url('https://oclobsterpot.vercel.app/OCLobsterPot-Ocean%20City_Hero.jpg') center/cover no-repeat;
   transform:scale(1.04);
 }
 .hero .shade{
@@ -236,7 +236,7 @@ h2{
 .menu-cta .bg{
   position:absolute;inset:0;
   /* SWAP: a second wide food shot for the menu banner */
-  background:url('https://images.squarespace-cdn.com/content/v1/680957fb9fc9745e8062803e/f3afabb4-cbbd-4576-beaa-2fc3564512ce/IMG_9060.jpg?format=2500w') center/cover no-repeat;
+  background:url('https://oclobsterpot.vercel.app/Real%20dining.jpg') center/cover no-repeat;
 }
 .menu-cta .shade{position:absolute;inset:0;background:rgba(29,20,13,.82)}
 .menu-cta .wrap{position:relative;z-index:2}
@@ -299,14 +299,63 @@ footer .foot-brand{font-family:var(--display);color:var(--butter);font-size:1.1r
 /* ---------- motion ---------- */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
+
+/* ---------- preloader: the cracking claw ---------- */
+#preloader{
+  position:fixed;inset:0;z-index:9999;
+  background:var(--wood);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+  transition:opacity .45s ease;
+}
+#preloader.done{opacity:0;pointer-events:none}
+#preloader svg{width:130px;height:130px;overflow:visible}
+#preloader .claw-top{
+  transform-origin:38px 66px;
+  animation:snap 0.55s cubic-bezier(.6,-0.3,.3,1.4) infinite alternate;
+}
+#preloader .crackline{
+  stroke-dasharray:40;stroke-dashoffset:40;
+  animation:crack 1.1s ease forwards infinite;
+}
+#preloader .load-text{
+  font-family:var(--mono);font-size:.75rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--sand);
+}
+@keyframes snap{
+  from{transform:rotate(-24deg)}
+  to{transform:rotate(0deg)}
+}
+@keyframes crack{
+  0%,55%{stroke-dashoffset:40;opacity:0}
+  60%{opacity:1}
+  100%{stroke-dashoffset:0;opacity:1}
+}
 @media (prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none}
   .ticker-track{animation:none}
   html{scroll-behavior:auto}
+  #preloader .claw-top,#preloader .crackline{animation:none}
 }
 </style>
 </head>
 <body>
+
+<!-- ================= PRELOADER: CRACK. ================= -->
+<div id="preloader" aria-hidden="true">
+  <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <!-- claw arm -->
+    <path d="M14 96 Q10 78 24 70 L40 62 L52 78 L38 88 Q26 100 14 96 Z" fill="#E04E2A"/>
+    <!-- bottom pincer -->
+    <path d="M38 66 Q58 54 84 62 Q104 70 106 84 Q92 82 78 80 Q60 78 46 82 Z" fill="#E04E2A"/>
+    <!-- top pincer (snaps) -->
+    <g class="claw-top">
+      <path d="M40 64 Q52 38 78 34 Q100 32 108 46 Q94 48 82 52 Q60 58 48 68 Z" fill="#E04E2A"/>
+    </g>
+    <!-- crack line -->
+    <path class="crackline" d="M64 52 l6 -6 l-3 8 l7 -4 l-4 9" stroke="#F5E3C2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <div class="load-text">Crack · Dip · Repeat</div>
+</div>
 
 <header>
   <a class="brand" href="#top">
@@ -330,8 +379,8 @@ footer .foot-brand{font-family:var(--display);color:var(--butter);font-size:1.1r
   <div class="shade"></div>
   <div class="content">
     <p class="kicker">984 Boardwalk · Ocean City, NJ</p>
-    <h1>Fresh Off the Boat.<br><em>Straight to the Boardwalk.</em></h1>
-    <p class="sub">Lobster rolls, whole lobster pots, sushi and boba — the biggest seafood spot on the Ocean City boardwalk.</p>
+    <h1>Crack.<br>Dip. <em>Repeat.</em></h1>
+    <p class="sub">Whole lobster pots, rolls, sushi and boba — the biggest seafood spot on the Ocean City boardwalk.</p>
     <div class="cta-row">
       <a class="btn" href="https://order.toasttab.com/online/ocean-city-984-boardwalk">Order with Toast</a>
       <a class="btn ghost" href="#catch">See the Catch</a>
@@ -355,7 +404,7 @@ footer .foot-brand{font-family:var(--display);color:var(--butter);font-size:1.1r
     <div class="dish-grid">
       <article class="dish">
         <!-- SWAP: DISH 1 -> LY8A0082.jpg (whole lobster plate) -->
-        <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/230f6f1c-bf0b-4d2a-9af6-82598b954693/PERFECT+LOBSTER+ROLL.png?format=2500w" alt="Whole lobster plate" loading="lazy" />
+        <img src="https://oclobsterpot.vercel.app/The%20lobster%20pot%20even%20better.jpg" alt="Whole seasoned lobster with corn and lemon" loading="lazy" />
         <div class="body">
           <h3>The Lobster Pot</h3>
           <p>A whole lobster, seasoned and piled high with corn, sausage and lemon. The namesake.</p>
@@ -363,15 +412,15 @@ footer .foot-brand{font-family:var(--display);color:var(--butter);font-size:1.1r
       </article>
       <article class="dish">
         <!-- SWAP: DISH 2 -> sushi shot -->
-        <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/44cefb59-4dbc-4abc-8e75-cd81a5f1939a/Screenshot+2025-07-25+at+12.35.04%E2%80%AFAM.png?format=750w" alt="OC Rainbow sushi roll" loading="lazy" />
+        <img src="https://oclobsterpot.vercel.app/yellowtail%20jalapeno.jpg" alt="Yellowtail jalapeno sashimi" loading="lazy" />
         <div class="body">
-          <h3>OC Rainbow Roll</h3>
-          <p>Fresh sushi with a shore-town twist — as bright as the boardwalk at sunset.</p>
+          <h3>Yellowtail Jalapeño</h3>
+          <p>Fresh yellowtail, thin-sliced, with jalapeño heat and a citrus finish.</p>
         </div>
       </article>
       <article class="dish">
         <!-- SWAP: DISH 3 -> Shoreline Cheeseburger & Traditional Lemonade.jpg -->
-        <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/a41e507a-fe24-4681-b20e-25f37d048898/1FB34EAE-1B99-4D12-A5E8-1CCE7AD0F4DD_1_102_a.jpeg?format=750w" alt="Shoreline cheeseburger with fries and lemonade" loading="lazy" />
+        <img src="https://oclobsterpot.vercel.app/Shoreline%20cheeseburger%20side%20with%20traditional%20lemonade.jpg" alt="Shoreline cheeseburger with fries and lemonade" loading="lazy" />
         <div class="body">
           <h3>Shoreline Cheeseburger</h3>
           <p>For the land-lovers: a stacked burger, crispy fries and a fresh-squeezed lemonade.</p>
@@ -396,13 +445,11 @@ footer .foot-brand{font-family:var(--display);color:var(--butter);font-size:1.1r
     <span class="tag">Catch № 03 — Gallery</span>
     <h2>Fresh From the Kitchen</h2>
     <div class="gallery-grid">
-      <!-- SWAP: GALLERY -> drop in 6-9 of the new pro shots; masonry auto-flows -->
-      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/b887480d-9ebb-4851-b028-eb26b2816aac/870D692C-E701-4D05-B9C3-DB3EA1F16F14_1_102_o.jpeg?format=750w" alt="Inside OC Lobster Pot" loading="lazy" />
-      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/d0a7e522-3280-4998-bde3-f5b3dbd70539/C11F2550-D454-427A-86F5-F19DB6144532_1_102_o.jpeg?format=750w" alt="Fresh seafood dish" loading="lazy" />
-      <img src="https://images.squarespace-cdn.com/content/v1/680957fb9fc9745e8062803e/f3afabb4-cbbd-4576-beaa-2fc3564512ce/IMG_9060.jpg?format=2500w" alt="Dining room" loading="lazy" />
-      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/bc3d3771-a7e8-420e-b7ac-206a22ee7048/Screenshot+2025-07-25+at+12.32.42%E2%80%AFAM.png?format=750w" alt="Sushi plate" loading="lazy" />
-      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/450d3847-2405-4863-afad-4582d5263de9/IMG_9423.jpeg?format=750w" alt="Restaurant interior" loading="lazy" />
-      <img src="https://images.squarespace-cdn.com/content/v1/67d72d2065215853298a66dc/80fdd258-b660-444e-ab12-ee2aa27a76af/DF821C15-B7DB-4542-8375-32C98921FA8C_1_102_o.jpeg?format=2500w" alt="Boardwalk view" loading="lazy" />
+      <!-- Add more <img> lines here as you upload more shots to the repo -->
+      <img src="https://oclobsterpot.vercel.app/Connecticut%20Lobster%20Roll.jpg" alt="Connecticut lobster roll" loading="lazy" />
+      <img src="https://oclobsterpot.vercel.app/Lobster%20Pot%20Top%20Shot.jpg" alt="Lobster pot from above" loading="lazy" />
+      <img src="https://oclobsterpot.vercel.app/first-class-boil.png" alt="First class seafood boil" loading="lazy" />
+      <img src="https://oclobsterpot.vercel.app/OCLobsterPot-Ocean%20City_Hero.jpg" alt="Full seafood spread" loading="lazy" />
     </div>
   </div>
 </section>
@@ -520,6 +567,16 @@ footer .foot-brand{font-family:var(--display);color:var(--butter);font-size:1.1r
 </div>
 
 <script>
+// preloader: hide after load (min 1.2s so the claw gets a snap in, max 3s failsafe)
+const pre = document.getElementById('preloader');
+const start = Date.now();
+function hidePre(){
+  const wait = Math.max(0, 1200 - (Date.now() - start));
+  setTimeout(()=>pre.classList.add('done'), wait);
+}
+window.addEventListener('load', hidePre);
+setTimeout(()=>pre.classList.add('done'), 3000);
+
 const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
